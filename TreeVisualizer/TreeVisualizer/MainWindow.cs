@@ -51,12 +51,12 @@ namespace TreeVisualizer
             if (tabControl.SelectedTab == tabPage_BST)
             {
                 _binarSearchTree.Insert(value);
-                _bstDrawBox.Print<BinarySearchTree<int>, int>(_binarSearchTree);
+                _bstDrawBox.Print<BinarySearchTree<int>>(_binarSearchTree);
             }
             else if (tabControl.SelectedTab == tabPage_AVL)
             {
                 _avlTree.Insert(value);
-                _avlDrawBox.Print<AVLTree<int>, int>(_avlTree);
+                _avlDrawBox.Print<AVLTree<int>>(_avlTree);
             }
         }
 
@@ -76,12 +76,12 @@ namespace TreeVisualizer
             if (tabControl.SelectedTab == tabPage_BST)
             {
                 _binarSearchTree.Remove(value);
-                _bstDrawBox.Print<BinarySearchTree<int>, int>(_binarSearchTree);
+                _bstDrawBox.Print<BinarySearchTree<int>>(_binarSearchTree);
             }
             else if (tabControl.SelectedTab == tabPage_AVL)
             {
                 _avlTree.Remove(value);
-                _avlDrawBox.Print<AVLTree<int>, int>(_avlTree);
+                _avlDrawBox.Print<AVLTree<int>>(_avlTree);
             }
         }
     }

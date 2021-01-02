@@ -20,8 +20,8 @@ namespace TreeVisualizer
                 true);
         }
 
-        public void Print<TTree, TValue>(ITree<TValue> tree)
-            where TTree : ITree<TValue> where TValue : IComparable<TValue>
+        public void Print<TTree>(ITree tree)
+            where TTree : ITree
         {
             _treeNodes = tree.GetAllNodes();
             _configuration = tree.GetConfiguration();
@@ -113,12 +113,12 @@ namespace TreeVisualizer
             if (node.IsAvlNode)
             {
                 grapics.DrawString(
-                node.Height.ToString(),
-                new Font(DefaultFont.FontFamily, 7f),
-                PensAndStuff.TextBrush,
-                node.IsLeftChild ? node.Position.X - 8f + offset : node.Position.X + _configuration.CircleDiameter + offset,
-                node.Position.Y
-                );
+                    node.Height.ToString(),
+                    new Font(DefaultFont.FontFamily, 7f),
+                    PensAndStuff.TextBrush,
+                    node.IsLeftChild ? node.Position.X - 8f + offset : node.Position.X + _configuration.CircleDiameter + offset,
+                    node.Position.Y
+                    );
             }
         }
     }
